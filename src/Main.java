@@ -24,9 +24,9 @@ public class Main {
 
         System.out.println("Задание №3");
 
-        int deliveryDays = calculateDeliveryDays(90);
+        int deliveryDays = calculateDeliveryDays(40);
         if (deliveryDays > 0) {
-            System.out.println("Потребуется " + deliveryDays + " день");
+            System.out.println("Потребуется дней: " + deliveryDays);
         } else {
             System.out.println("Доставки нет");
         }
@@ -51,15 +51,15 @@ public class Main {
 
     public static int calculateDeliveryDays(int deliveryDistance) {
 
-        int days = 0;
-        if (deliveryDistance >0 && deliveryDistance < 20) {
-            days ++;
+        int days = -1;
+        if (deliveryDistance > 0 && deliveryDistance < 20) {
+            days = 1;
         }
         if (deliveryDistance >= 20 && deliveryDistance < 60) {
-            days ++;
+            days = 2;
         }
         if (deliveryDistance >= 60 && deliveryDistance < 100) {
-            days ++;
+            days = 3;
         }
         return days;
     }
